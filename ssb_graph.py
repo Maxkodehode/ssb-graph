@@ -11,6 +11,7 @@ if len(sys.argv) > 2:
         body = json.load(f)
 else:
     body = {
+
   "selection": [
     {"variableCode": "Hovedpost2", "valueCodes": ["00"]},
     {"variableCode": "ContentsCode", "valueCodes": ["Brutto"]},
