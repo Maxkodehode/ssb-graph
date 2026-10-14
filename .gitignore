@@ -17,6 +17,7 @@ __pycache__/
 .vscode/
 *.json
 *.png
+*.html
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
