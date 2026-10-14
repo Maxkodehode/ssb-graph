@@ -2,65 +2,55 @@
   "language": "en",
   "tables": [
     {
-      "id": "14091",
-      "label": "14091: Electricity balance (MWh) 1993M01-2026M08",
+      "id": "10280",
+      "label": "10280: Income and deductions for self-employed, by main income. Average amount for all (NOK) 2011-2024",
       "description": "",
-      "sortCode": "0000000050",
-      "updated": "2026-09-15T06:00:00Z",
-      "firstPeriod": "1993M01",
-      "lastPeriod": "2026M08",
+      "sortCode": "0000000035",
+      "updated": "2026-01-23T07:00:00Z",
+      "firstPeriod": "2011",
+      "lastPeriod": "2024",
       "category": "public",
       "variableNames": [
-        "production and consumption",
+        "main income",
         "contents",
-        "month"
+        "year"
       ],
       "source": "Statistics Norway",
-      "subjectCode": "ei",
-      "timeUnit": "Monthly",
+      "subjectCode": "if",
+      "timeUnit": "Annual",
       "paths": [
         [
           {
-            "id": "ei",
-            "label": "Energy and manufacturing",
-            "sortCode": "0000030"
+            "id": "if",
+            "label": "Income and consumption",
+            "sortCode": "0000038"
           },
           {
-            "id": "ei01",
-            "label": "Energy",
-            "sortCode": "0000031"
+            "id": "if02",
+            "label": "Income and wealth",
+            "sortCode": "0000040"
           },
           {
-            "id": "elektrisitet",
-            "label": "Electricity",
-            "sortCode": "0000032"
-          },
-          {
-            "id": "SBMENU6800",
-            "label": "Monthly figures",
-            "sortCode": "0000000010"
+            "id": "ifpn",
+            "label": "Income for self-employed",
+            "sortCode": "0000041"
           }
         ],
         [
           {
-            "id": "sv",
-            "label": "Svalbard",
-            "sortCode": "0000093"
+            "id": "if",
+            "label": "Income and consumption",
+            "sortCode": "0000038"
           },
           {
-            "id": "sv04",
-            "label": "Business & technology",
-            "sortCode": "0000098"
+            "id": "if03",
+            "label": "Personal tax",
+            "sortCode": "0000041"
           },
           {
-            "id": "elektrisitet",
-            "label": "Electricity",
-            "sortCode": "0000099"
-          },
-          {
-            "id": "SBMENU6800",
-            "label": "Monthly figures",
-            "sortCode": "0000000010"
+            "id": "ifpn",
+            "label": "Income for self-employed",
+            "sortCode": "0000042"
           }
         ]
       ],
@@ -68,22 +58,22 @@
         {
           "rel": "self",
           "hreflang": "en",
-          "href": "https://data.ssb.no/api/pxwebapi/v2/tables/14091?lang=en"
+          "href": "https://data.ssb.no/api/pxwebapi/v2/tables/10280?lang=en"
         },
         {
           "rel": "alternate",
           "hreflang": "no",
-          "href": "https://data.ssb.no/api/pxwebapi/v2/tables/14091?lang=no"
+          "href": "https://data.ssb.no/api/pxwebapi/v2/tables/10280?lang=no"
         },
         {
           "rel": "metadata",
           "hreflang": "en",
-          "href": "https://data.ssb.no/api/pxwebapi/v2/tables/14091/metadata?lang=en"
+          "href": "https://data.ssb.no/api/pxwebapi/v2/tables/10280/metadata?lang=en"
         },
         {
           "rel": "data",
           "hreflang": "en",
-          "href": "https://data.ssb.no/api/pxwebapi/v2/tables/14091/data?lang=en&outputFormat=json-stat2"
+          "href": "https://data.ssb.no/api/pxwebapi/v2/tables/10280/data?lang=en&outputFormat=json-stat2"
         }
       ]
     }
@@ -99,7 +89,11 @@
     {
       "rel": "self",
       "hreflang": "en",
-      "href": "https://data.ssb.no/api/pxwebapi/v2/tables/?lang=en&query=14091&pagesize=20&pageNumber=1"
+      "href": "https://data.ssb.no/api/pxwebapi/v2/tables/?lang=en&query=10280&pagesize=20&pageNumber=1"
     }
   ]
 }
+
+
+
+
