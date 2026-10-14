@@ -1,0 +1,45 @@
+name: Build server library and deploy to nuget
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout your code
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Install minver locally
+        run: |
+          dotnet new tool-manifest
+          dotnet tool install minver-cli
+
+      - name: Calculate version
+        run: echo "version=$(dotnet minver -t v -v e)" >> $GITHUB_ENV
+
+      - name: Restore Nuget
+        run: dotnet restore
+
+      - name: Build library
+        run: dotnet build --no-restore --configuration Release /p:Version=${{ env.version }}
+
+      - name: Pack library
+        run: dotnet pack --configuration Release /p:Version=${{ env.version }} --output .
+
+      - name: Depoly to Nuget
+        run: |
+          dotnet nuget push PxWeb.Api2.Server.Models.${{ env.version }}.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://nuget.org
+          dotnet nuget push PxWeb.Api2.Server.${{ env.version }}.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://nuget.org

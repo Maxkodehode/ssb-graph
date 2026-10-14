@@ -1,0 +1,11 @@
+additionalProperties:
+  aspnetCoreVersion: 8.0
+  buildTarget: library
+  licenseName: Apache-2.0
+  nullableReferenceTypes: true
+  useSwashbuckle: true
+  packageAuthors: SCB & SSB
+  packageDescription: Server library for PxWeb API 2.0
+  packageName: PxWeb.Api2.Server
+  packageTitle: PxWeb.Api2.Server
+  useSeparateModelProject: true
