@@ -5,7 +5,7 @@ import json
 BASE = "https://data.ssb.no/api/pxwebapi/v2"
 
 if len(sys.argv) < 2:
-    print("Usage: python ssb_graph.py <table_id> [query_file]")
+    print("Usage: python fetch_data.py <table_id> [query_file]")
     sys.exit(1)
 
 TABLE = sys.argv[1]
